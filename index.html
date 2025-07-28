@@ -3,97 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>x infinity x — AI-Powered Investor Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #0e0e10;
-      color: #ffffff;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-      background: linear-gradient(to right, #1a1a2e, #16213e);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-    .cta {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .cta button {
-      padding: 0.75rem 1.5rem;
-      background-color: #1f8ef1;
-      border: none;
-      border-radius: 0.5rem;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .cta button:hover {
-      background-color: #0d6efd;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    .feature {
-      margin-bottom: 3rem;
-    }
-    .feature h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-    .feature p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      background-color: #111;
-      color: #777;
-    }
-  </style>
+  <title>X Infinity X</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>&lt;x infinity x&gt;</h1>
-    <p>Visualized Bloomberg with AI functions for investors</p>
-    <div class="cta">
-      <button>Request Early Access</button>
-    </div>
-  </header>
-
-  <section>
-    <div class="feature">
-      <h2>Intelligent Market Dashboards</h2>
-      <p>Real-time data visualizations and insights, tailored by AI to your investment strategy.</p>
-    </div>
-    <div class="feature">
-      <h2>LLM-Powered Analytics</h2>
-      <p>Use natural language to ask questions about markets, portfolios, and trends.</p>
-    </div>
-    <div class="feature">
-      <h2>Portfolio Visualization</h2>
-      <p>See your portfolio in new dimensions — performance, risk, and opportunity in one glance.</p>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Hero Section -->
+  <section class="min-h-screen bg-gradient-to-br from-purple-600 to-indigo-600 text-white px-6 py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-4">Welcome to <span class="text-yellow-300">X Infinity X</span></h1>
+      <p class="text-xl mb-8">Where Innovation Meets Impact. We turn bold ideas into powerful digital products.</p>
+      <a href="#signup" class="bg-white text-indigo-700 px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-yellow-300 transition">Get Started</a>
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 &lt;x infinity x&gt;. All rights reserved.
+  <!-- About Section -->
+  <section class="py-20 px-6 bg-gray-100">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <img src="https://via.placeholder.com/500x300" alt="X Infinity X Concept" class="rounded-2xl shadow-lg" />
+      <div>
+        <h2 class="text-3xl font-bold mb-4">What is X Infinity X?</h2>
+        <p class="text-lg">X Infinity X is a cutting-edge platform focused on delivering seamless digital experiences. Whether it's launching your MVP or scaling to millions of users, our tools and team are here to accelerate your journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">Why Choose Us?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white shadow-lg rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">Fast Launch</h3>
+          <p>From idea to prototype in days, not months.</p>
+        </div>
+        <div class="p-6 bg-white shadow-lg rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">Scalable Tech</h3>
+          <p>Infrastructure that grows with you.</p>
+        </div>
+        <div class="p-6 bg-white shadow-lg rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">MBA-Friendly</h3>
+          <p>No code? No problem. We build for business minds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="signup" class="bg-indigo-600 text-white py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Ready to build something amazing?</h2>
+    <p class="mb-8">Join X Infinity X today and turn your ideas into reality.</p>
+    <form class="max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <input type="text" placeholder="Your Name" class="p-3 rounded-xl text-gray-800" required>
+      <input type="email" placeholder="Your Email" class="p-3 rounded-xl text-gray-800" required>
+      <button type="submit" class="sm:col-span-2 bg-yellow-300 text-indigo-800 font-bold py-3 rounded-xl hover:bg-yellow-400 transition">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm bg-gray-100">
+    &copy; 2025 X Infinity X. All rights reserved.
   </footer>
 </body>
 </html>
