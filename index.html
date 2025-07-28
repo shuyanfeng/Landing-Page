@@ -1,67 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>X Infinity X</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Biotech Hunter</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      background: #6a1b9a;
+      color: white;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    input[type="email"] {
+      padding: 0.75rem;
+      width: 60%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+
+    button {
+      padding: 0.75rem 1.25rem;
+      border: none;
+      background-color: #8e24aa;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #7b1fa2;
+    }
+
+    .hero-image {
+      margin-top: 2rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <!-- Hero Section -->
-  <section class="min-h-screen bg-gradient-to-br from-purple-600 to-indigo-600 text-white px-6 py-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-4">Welcome to <span class="text-yellow-300">X Infinity X</span></h1>
-      <p class="text-xl mb-8">Where Innovation Meets Impact. We turn bold ideas into powerful digital products.</p>
-      <a href="#signup" class="bg-white text-indigo-700 px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-yellow-300 transition">Get Started</a>
+
+<body>
+  <header>
+    <h1>Biotech Hunter</h1>
+    <div class="tagline">The Crunchbase for Life Science Startups</div>
+  </header>
+
+  <section>
+    <p>
+      Discover, track, and invest in emerging biotech and life science startups.
+      Biotech Hunter brings you real-time company data, funding history,
+      founder bios, and more—all in one intuitive platform.
+    </p>
+
+    <div class="cta">
+      <input type="email" id="email" placeholder="Enter your email" />
+      <button onclick="subscribe()">Join the Beta</button>
     </div>
+
+    <img src="https://source.unsplash.com/featured/?biotech" class="hero-image" alt="Biotech Lab" />
   </section>
 
-  <!-- About Section -->
-  <section class="py-20 px-6 bg-gray-100">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <img src="https://via.placeholder.com/500x300" alt="X Infinity X Concept" class="rounded-2xl shadow-lg" />
-      <div>
-        <h2 class="text-3xl font-bold mb-4">What is X Infinity X?</h2>
-        <p class="text-lg">X Infinity X is a cutting-edge platform focused on delivering seamless digital experiences. Whether it's launching your MVP or scaling to millions of users, our tools and team are here to accelerate your journey.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="py-20 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-12">Why Choose Us?</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white shadow-lg rounded-2xl">
-          <h3 class="text-xl font-semibold mb-2">Fast Launch</h3>
-          <p>From idea to prototype in days, not months.</p>
-        </div>
-        <div class="p-6 bg-white shadow-lg rounded-2xl">
-          <h3 class="text-xl font-semibold mb-2">Scalable Tech</h3>
-          <p>Infrastructure that grows with you.</p>
-        </div>
-        <div class="p-6 bg-white shadow-lg rounded-2xl">
-          <h3 class="text-xl font-semibold mb-2">MBA-Friendly</h3>
-          <p>No code? No problem. We build for business minds.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section id="signup" class="bg-indigo-600 text-white py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4">Ready to build something amazing?</h2>
-    <p class="mb-8">Join X Infinity X today and turn your ideas into reality.</p>
-    <form class="max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <input type="text" placeholder="Your Name" class="p-3 rounded-xl text-gray-800" required>
-      <input type="email" placeholder="Your Email" class="p-3 rounded-xl text-gray-800" required>
-      <button type="submit" class="sm:col-span-2 bg-yellow-300 text-indigo-800 font-bold py-3 rounded-xl hover:bg-yellow-400 transition">Sign Up</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500 text-sm bg-gray-100">
-    &copy; 2025 X Infinity X. All rights reserved.
-  </footer>
+  <script>
+    function subscribe() {
+      const email = document.getElementById('email').value;
+      if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address.');
+      } else {
+        alert(`Thanks for signing up, ${email}! We'll keep you posted.`);
+        document.getElementById('email').value = '';
+      }
+    }
+  </script>
 </body>
+
 </html>
